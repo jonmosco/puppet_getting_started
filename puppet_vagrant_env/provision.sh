@@ -9,13 +9,13 @@
 # Node:
 # - Edit /etc/hosts
 # - Turn off iptables
-#
-# TODO
-# - turn if into case [DONE 7/22/13]
+
+# Change this
+DOMAIN="example.com"
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
-HOSTS="192.168.33.10 puppet.forkedprocess.com puppet
-192.168.33.11 node.forkedprocess.com node"
+HOSTS="192.168.33.10 puppet.${DOMAIN} puppet
+192.168.33.11 node.${DOMAIN} node"
 
 SITE=`cat <<-END
 node default {
